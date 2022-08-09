@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,1,0"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="main.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>Feedback landing page</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <ul>
+        <li>
+          <span><i data-feather="globe"></i></span>
+        </li>
+        <li class="brightness">
+          <span><i data-feather="sun"></i></span>
+          <ul>
+            <li>
+              <div>
+                <span id="decrement"><i data-feather="minus"></i></span>
+                <input
+                  type="range"
+                  name="adjust"
+                  id="adjust"
+                  step="10"
+                  min="10"
+                  max="100"
+                  value="20"
+                />
+                <span id="increment"><i data-feather="plus"></i></span>
+              </div>
+            </li>
+            <li class="active">
+              <span>Default</span>
+            </li>
+            <li>
+              <span>Deuteranomaly</span>
+            </li>
+            <li>
+              <span>Protanomaly</span>
+            </li>
+          </ul>
+        </li>
+        <li class="typography">
+          <span><i data-feather="type"></i></span>
+          <div>
+            <span>
+              <span><i data-feather="minus"></i></span>
+              <strong>Aa</strong>
+              <span><i data-feather="plus"></i></span>
+            </span>
+          </div>
+        </li>
+        <li>
+          <span><i data-feather="headphones"></i></span>
+        </li>
+        <li>
+          <span><i data-feather="refresh-cw"></i></span>
+        </li>
+      </ul>
+      <div id="contents">
+        <template id="landing">
+          <div class="content">
+            <div class="content-card">
+              <h1>Good Afternoon,</h1>
+              <p class="text-md">
+                Your feedback helps us <br />
+                help you
+              </p>
+              <button class="start-btn">
+                <i data-feather="play"></i> Start
+              </button>
+            </div>
+            <hr />
+            <div class="content-card">
+              <h1>Bonne après-midi</h1>
+              <p class="text-md">
+                Vos commentaires nous <br />
+                aident à vous aider
+              </p>
+              <button class="start-btn">
+                <i data-feather="play"></i> Commencez
+              </button>
+            </div>
+          </div>
+        </template>
+        <template id="identity">
+          <div class="content">
+            <div class="content-card">
+              <h1>First Time User?</h1>
+              <button class="first-time">
+                <i data-feather="play"></i> Start Here
+              </button>
+            </div>
+            <hr />
+            <div class="content-card">
+              <h1>Revisiting User?</h1>
+              <button class="regular">
+                <i data-feather="play"></i> Start Here
+              </button>
+            </div>
+          </div>
+        </template>
+        <template id="verification"
+          ><div class="content">
+            <div class="content-card">
+              <h1>Verifying you</h1>
+              <p class="text-sm">
+                Taking a picture for validating your identity <br />
+                and previous inputs.
+              </p>
+              <div class="frame"></div>
+              <p class="text-xsm">
+                All of your information collected by the food bank is kept
+                confidential.
+              </p>
+            </div>
+          </div>
+        </template>
+        <template id="end"
+          ><div class="content">
+            <div class="content-card">
+              <h1>
+                Thanks! Your feedback will <br />
+                help us help you.
+              </h1>
+              <p class="text-sm">
+                Please <span class="blue-text">don't forget</span> to take your
+                belongs when you leave.
+              </p>
+              <div class="frame">
+                <div><p>Awesome Illustration</p></div>
+              </div>
+              <p class="text-xsm">
+                All of your information collected by the food bank is kept
+                confidential.
+              </p>
+            </div>
+          </div>
+        </template>
+        <template id="authentication"
+          ><div class="content">
+            <div class="content-card">
+              <h1>First time? ID Please...</h1>
+              <p class="text-sm">
+                Please place your photo ID on the scanner besides <br />
+                the screen as shown below
+              </p>
+              <div class="frame"></div>
+              <p class="text-xsm">
+                All of your information collected by the food bank is kept
+                confidential.
+              </p>
+            </div>
+          </div>
+        </template>
+
+        <template id="feedback">
+          <div class="content">
+            <div class="content-card">
+              <div class="nav-btn">
+                <button id="left-btn">
+                  <!-- <i data-feather="arrow-left-circle"></i> -->
+                  <span class="material-symbols-outlined">
+                    arrow_circle_left
+                  </span>
+                </button>
+                <button id="right-btn">
+                  <!-- <i data-feather="arrow-right-circle"></i> -->
+                  <span class="material-symbols-outlined">
+                    arrow_circle_right
+                  </span>
+                </button>
+              </div>
+              <ul class="indicator">
+                <li class="done"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <p class="text-xsm helper-text">
+                Your opinion matters. Please be honest.
+              </p>
+              <div class="slider-container">
+                <ul class="slider">
+                  <li class="slide">
+                    <h1>Site Accessibility</h1>
+                    <p class="text-sm">
+                      How accessible is this food bank for you?
+                    </p>
+                  </li>
+                  <li class="slide">
+                    <h1>Food Portion</h1>
+                    <p class="text-sm">
+                      Do you think the quality of food you get is enough for
+                      your needs?
+                    </p>
+                  </li>
+                  <li class="slide">
+                    <h1>Service</h1>
+                    <p class="text-sm">
+                      How happy are you with service you recieved at the Food
+                      Bank?
+                    </p>
+                  </li>
+                  <li class="slide">
+                    <h1>Food Quality</h1>
+                    <p class="text-sm">
+                      How would you rate the quality of the food served?
+                    </p>
+                  </li>
+                </ul>
+              </div>
+
+              <ul class="emojis">
+                <li>
+                  <img src="icons/bad.svg" alt="" />
+                  <!-- <object data="icons/bad.svg" width="50" height="50"></object> -->
+                </li>
+                <li>
+                  <img src="icons/nevermind.svg" alt="" />
+                </li>
+                <li>
+                  <img src="icons/good.svg" alt="" />
+                </li>
+                <li>
+                  <img src="icons/perfect.svg" alt="" />
+                </li>
+              </ul>
+            </div></div
+        ></template>
+      </div>
+    </div>
+  </body>
+  <script>
+    feather.replace();
+  </script>
+</html>

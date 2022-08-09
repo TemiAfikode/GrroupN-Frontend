@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #e7e6c8;
+  color: black;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+}
+h1 {
+  font-size: 3rem;
+  padding-bottom: 0.8rem;
+}
+.text-lg {
+  font-weight: 600;
+}
+.text-md {
+  font-weight: 500;
+}
+.text-sm {
+  font-weight: 300;
+}
+.text-xsm {
+  font-weight: 100;
+  font-size: 1.2rem;
+}
+.container {
+  padding: 2rem;
+  width: 100%;
+  max-width: 824px;
+  margin: 0 auto;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul li {
+  padding: 0.5rem 0.85rem;
+}
+ul li span {
+  opacity: 0.7;
+  display: inline-block;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+ul li span:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.typography,
+.brightness {
+  position: relative;
+}
+.typography > div {
+  display: none;
+  position: absolute;
+  bottom: -25px;
+  left: -20px;
+  width: 100px;
+  border-radius: 4px;
+}
+.typography:hover > div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #d9d9c9;
+}
+.typography > div span {
+  cursor: pointer;
+}
+.typography > div span,
+.brightness > ul li:first-child > div > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.typography > div span svg,
+.brightness > ul li:first-child > div > span svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 5px;
+}
+.typography > div strong {
+  padding: 0 8px;
+}
+
+.brightness > ul {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  background: #d9d9c9;
+  bottom: -150x;
+  left: -70px;
+  width: 200px;
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+.brightness:hover > ul {
+  display: flex;
+}
+.brightness > ul li,
+.brightness > ul li span {
+  width: 100%;
+}
+
+.brightness > ul li:not(:first-child) > span:hover,
+.brightness > ul li.active > span {
+  background: #f3f3e4;
+  padding: 8px;
+  border-radius: 4px;
+}
+.brightness > ul li:first-child > div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.brightness > ul li:first-child > div > input {
+  appearance: none;
+  height: 3px;
+  width: 80px;
+  background: #5f5f5f;
+  transition: all 0.3s;
+  outline: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.brightness > ul li:first-child > div > input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border: 0;
+  background: #5f5f5f;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.brightness > ul li:first-child > div > input::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  border: 0;
+  background: #5f5f5f;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.content {
+  padding: 2rem 1rem;
+}
+.content-card {
+  padding: 1.5rem 0;
+}
+.blue-text {
+  color: skyblue;
+}
+.content-card button {
+  border: 0;
+  outline: 0;
+  background: #f8c339;
+  color: #645838;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 1.2rem;
+}
+.content-card button:hover {
+  transform: translateY(-3px);
+}
+hr {
+  max-width: 350px;
+  outline: 0;
+  border: 0;
+  height: 1px;
+  background: #d4d3b7;
+}
+.frame {
+  margin: 2rem 0;
+  border: 1px solid black;
+  background: rgba(0, 0, 0, 0.5);
+  color: #b4b4b4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+.frame:hover {
+  border: 2px solid #000;
+  transform: scale(1.003);
+}
+.frame > div {
+  display: flex;
+  align-items: center;
+}
+.icon-svg {
+  font-size: 48px;
+  margin-right: 10px;
+}
+.frame > div > span.loading {
+  width: 28px;
+  height: 28px;
+  border-top: 4px solid #b4b4b4;
+  border-radius: 50%;
+  animation: spinner 1.5s infinite;
+}
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.nav-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+.nav-btn > button {
+  background: none;
+}
+.nav-btn > button:first-child {
+  visibility: hidden;
+}
+.nav-btn > button span {
+  font-size: 50px;
+}
+.nav-btn > button:hover {
+  color: black;
+}
+.indicator {
+  justify-content: center;
+}
+.indicator > li {
+  width: 20%;
+  height: 5px;
+  background: #5f5f5f;
+  opacity: 0.3;
+  padding: 0;
+  margin-right: 10px;
+}
+.indicator > li.done {
+  background: #5f5f5f;
+  opacity: 0.8;
+}
+.helper-text {
+  margin: 2rem 0;
+}
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+}
+.slider {
+  display: flex;
+  flex-shrink: 0;
+  width: 400%;
+  transition: all 0.4s;
+}
+.slide {
+  width: 100%;
+}
+.emojis {
+  margin: 2rem 0;
+}
+.emojis > li {
+  color: #5f5f5f;
+  overflow: hidden;
+}
+.emojis > li img {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s;
+}
+.emojis > li img:hover {
+  transform: scale(1.08);
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .text-xsm {
+    font-size: 0.8rem;
+  }
+  .frame {
+    height: 300px;
+  }
+  .frame > div > span,
+  .frame > div > p {
+    font-size: 1.5rem;
+  }
+  .icon-svg {
+    font-size: 40px;
+  }
+  .content-card button svg {
+    width: 20px;
+    height: 20px;
+  }
+}
